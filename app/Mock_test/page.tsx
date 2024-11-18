@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { number, problems } from "../../data/data";
 import { getCookies, setCookie } from "cookies-next";
 import { Ex } from "../../component/problem";
+import { ExPlay } from "../../component/playProblem";
 
 export default function Page() {
   const [name, setName] = useState("");
@@ -21,6 +22,7 @@ export default function Page() {
     }
   }, []);
 
+  // 마지막순서만 버튼명 다르게 리턴
   const NextButton = (count: number) => {
     if (count < 22) {
       return (
@@ -46,6 +48,14 @@ export default function Page() {
           성적보러가기
         </Link>
       );
+    }
+  };
+
+  const example = (count: number) => {
+    if (count < 10) {
+      return Ex(problems[count], answerInsert);
+    } else {
+      return ExPlay(problems[count], answerInsert);
     }
   };
 
@@ -88,7 +98,7 @@ export default function Page() {
 
       {/* 문제 */}
       <div className={`${styles.problem} ${styles.flexColumnCenter}`}>
-        {Ex(problems[count], answerInsert)}
+        {example(count)}
         {NextButton(count)}
       </div>
     </div>
