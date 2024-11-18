@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aka_mock_test
 
-## Getting Started
+- 본 레포지토리는 특정 스트리머와 관련된 문제를 푸는 모의고사 사이트입니다.
 
-First, run the development server:
+## 제작자
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 성해경(쪼에)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 사이트 공개일정
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 미정
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 개발 환경
 
-## Learn More
+- NestJS
+- React
+- firebase
 
-To learn more about Next.js, take a look at the following resources:
+## 방식
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 4지선다의 객관식 문제로 되어있으며, 객관식 문제 순서들은 접속 시 마다 랜덤으로 배치됩니다.
+- 1~10번은 듣기평가 형식 으로 제작 예정입니다.
+- 문제 풀이 중에는 뒤로가기가 지원되지 않아 뒤로 가면 다시 풀어야 합니다.
+- 마지막 결과 페이지에서는 특정 범위마다 각기 다른 멘트로 성적과 함께 관련한 멘트가 보여집니다.
+- 몇개의 이스터 에그를 넣었습니다.
