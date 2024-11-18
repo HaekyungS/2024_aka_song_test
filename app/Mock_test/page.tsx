@@ -22,7 +22,7 @@ export default function Page() {
   }, []);
 
   const NextButton = (count: number) => {
-    if (count < 10) {
+    if (count < 22) {
       return (
         <div
           className={styles.buttom}
@@ -37,7 +37,7 @@ export default function Page() {
           다음 문제
         </div>
       );
-    } else if (count >= 10) {
+    } else if (count >= 22) {
       const hrefLink = respon[count] !== undefined ? "/Result" : "#";
 
       setCookie("answer", respon);
