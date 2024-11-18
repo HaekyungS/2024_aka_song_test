@@ -2,17 +2,19 @@ interface problems {
   number: String;
   problem: String;
   ex: Array<String>;
+  videoid?: String;
 }
 
 export const problems: Array<problems> = [
   {
-    //https://youtu.be/OrcIZU20KBs?si=nRSVGz4NVI7HrN-x
+    //https://www.youtube.com/watch?v=OrcIZU20KBs
     number: "첫번째",
     problem: "재생된 곡의 제목은?",
     ex: ["Queen", "King", "엔비 베이비", "취한 줄도 모르고"],
+    videoid: "OrcIZU20KBs",
   },
   {
-    // https://youtu.be/z_wOAjxjelA?si=AWbKgexf3Nz3dKqo
+    // https://www.youtube.com/watch?v=z_wOAjxjelA
     number: "두번째",
     problem: "재생된 곡의 제목은?",
     ex: [
@@ -21,9 +23,10 @@ export const problems: Array<problems> = [
       "いかないで (가지마)",
       "白金ディスコ (백금디스코)",
     ],
+    videoid: "z_wOAjxjelA",
   },
   {
-    // https://youtu.be/tRO1wsDn488?si=bGHLenv2WSOn2vK-
+    // https://www.youtube.com/watch?v=tRO1wsDn488
     number: "세번째",
     problem: "재생된 곡의 제목은?",
     ex: [
@@ -32,34 +35,38 @@ export const problems: Array<problems> = [
       "ねむるまち (잠이 드는 거리)",
       "寄り酔い (취기)",
     ],
+    videoid: "tRO1wsDn488",
   },
   {
-    //https://youtu.be/rROoaC8y-Gw?si=cPWycTan4uIiM8By
+    //https://www.youtube.com/watch?v=rROoaC8y-Gw
     number: "네번째",
     problem: "다음 재생된 곡과 관련된 것으로 틀린 것은?",
     ex: [
-      "한국어 개사하여 커버하였다.",
+      "해당 곡은 21년도 커버곡이다.",
       "원곡은 팝송이다.",
       "해당 영상에서 류님은 욕조 안에 있다.",
       "해당 영상에서 류님은 한번도 눈을 감지 않는다.",
     ],
+    videoid: "rROoaC8y-Gw",
   },
   {
-    //https://youtu.be/fJbz5CV6aLU?si=mDjnA5e83Nr8mnxN
+    //https://www.youtube.com/watch?v=fJbz5CV6aLU
     // C.Look
     number: "다섯번째",
     problem: "24년 8월 2일 진행된 류님의 커버곡 티어표에서 지금 재생된 노래가 받은 등급은?",
     ex: ["B", "S", "A", "D"],
+    videoid: "fJbz5CV6aLU",
   },
   {
-    // https://youtu.be/mcJreu1BsBo?si=ZrKXhTigMIaIkQwh
+    // https://www.youtube.com/watch?v=mcJreu1BsBo
     // 내꺼하는법
     number: "여섯번째",
     problem: "재생된 곡 속 류님의 니트에 있는 과일은?",
     ex: ["딸기", "방울토마토", "체리", "앵두"],
+    videoid: "mcJreu1BsBo",
   },
   {
-    // https://youtu.be/d1eahPr-Dj0?si=JB4nKthjc4h9XLJ_
+    // https://www.youtube.com/watch?v=d1eahPr-Dj0
     // 11:11
     number: "일곱번째",
     problem: "재생된 곡과 관련한 정보로 틀린 것은?",
@@ -69,19 +76,23 @@ export const problems: Array<problems> = [
       "커버곡 티어표 진행 시, 해당 곡을 내리고싶은 곡으로 뽑았다.",
       "원곡의 발매일이 류님의 생일인 11월 1일이다.",
     ],
+    videoid: "d1eahPr-Dj0",
   },
   {
-    // https://youtu.be/0qM7RNlZ4o0?si=eAQ6d6yjdFfcj32D
+    // https://www.youtube.com/watch?v=0qM7RNlZ4o0
     // Can't Slow Me down
     number: "여덟번째",
     problem: "재생된 노래와 관련한 게임에서 류님이 사용하거나 사용했던 닉네임이 아닌 것은?",
     ex: ["핑크곤듀아카용", "멋진김치만두임", "XxIL", "Hitscan"],
+    videoid: "0qM7RNlZ4o0",
   },
+
   {
-    // https://youtu.be/UnwOL_xVbtM?si=LjuZm6M9BRa4593A
+    // https://www.youtube.com/watch?v=UnwOL_xVbtM
     number: "아홉번째",
     problem: "재생된 곡은 「지코, 페노메코 - 걘 아니야 Part1, 2」 입니다. 다음 중 어떤 버전일까요?",
     ex: ["아카펠라 버전", "어쿠스틱 버전", "좌우음성 버전", "좌우음성 No MR 버전"],
+    videoid: "UnwOL_xVbtM",
   },
   {
     number: "열번째",
