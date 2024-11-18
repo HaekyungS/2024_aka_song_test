@@ -39,6 +39,7 @@ export const Ex = (problem: problems, answer) => {
   return (
     <>
       <div className={styles.examNumber}>{problem.number} 문제</div>
+      {/* 이 부분에 1~10번까지는 재생형식으로 정정 */}
       <div className={styles.examTitle}>{problem.problem}</div>
       <ol className={`${styles.exams} ${styles.flexColumnCenter}`}>
         {load &&
