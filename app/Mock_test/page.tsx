@@ -52,7 +52,7 @@ export default function Page() {
   };
 
   const example = (count: number) => {
-    if (count < 10) {
+    if (count < 9) {
       return ExPlay(problems[count], answerInsert);
     } else {
       return Ex(problems[count], answerInsert);
@@ -77,7 +77,7 @@ export default function Page() {
       {/* 상단 고정부분 */}
       <div className={`${styles.topBox} ${styles.flexColumnCenter}`}>
         <div className={`${styles.topTitle} ${styles.flexRowCenter}`}>
-          <div className={styles.title}>2023년도 아카이로 류 모의고사</div>
+          <div className={styles.title}>2024년도 아카이로 류 모의고사</div>
           <div className={styles.type}>아카용</div>
         </div>
         <div className={`${styles.topName} ${styles.flexRowCenter}`}>
