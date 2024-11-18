@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import Youtube from "react-youtube";
 import styles from "../styles/page.module.css";
 
 interface problems {
   number: String;
   problem: String;
   ex: Array<String>;
+  videoid: string;
 }
 
 export const ExPlay = (problem: problems, answer) => {
@@ -39,7 +41,17 @@ export const ExPlay = (problem: problems, answer) => {
   return (
     <>
       <div className={styles.examNumber}>{problem.number} 문제</div>
-      {/* 이 부분에 1~10번까지는 재생형식으로 정정 */}
+      <Youtube
+        videoId={problem.videoid}
+        opts={{
+          width: "100px",
+          height: "100px",
+          playerVars: { autoplay: 1, rel: 0, modestbranding: 1 },
+        }}
+        onEnd={(e) => {
+          e.target.stopVideo(0);
+        }}
+      />
       <div className={styles.examTitle}>{problem.problem}</div>
       <ol className={`${styles.exams} ${styles.flexColumnCenter}`}>
         {load &&
