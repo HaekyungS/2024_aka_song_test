@@ -53,9 +53,9 @@ export default function Page() {
 
   const example = (count: number) => {
     if (count < 10) {
-      return Ex(problems[count], answerInsert);
-    } else {
       return ExPlay(problems[count], answerInsert);
+    } else {
+      return Ex(problems[count], answerInsert);
     }
   };
 
