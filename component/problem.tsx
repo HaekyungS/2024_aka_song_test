@@ -1,10 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
+import Youtube from "react-youtube";
 import styles from "../styles/page.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 interface problems {
   number: String;
   problem: String;
   ex: Array<String>;
+  videoid?: String;
 }
 
 export const Ex = (problem: problems, answer) => {
@@ -16,6 +20,8 @@ export const Ex = (problem: problems, answer) => {
     { color: "black" },
     { color: "black" },
   ]);
+  const [play, setPlay] = useState(false);
+  const [player, setPlayer] = useState<any>(null);
 
   useEffect(() => {
     const exNumA = [];
@@ -35,12 +41,56 @@ export const Ex = (problem: problems, answer) => {
     // console.log("useEffect 안 랜덤숫자", exNum);
   }, [problem]);
 
+  const handlePlayerReady = (event: any) => {
+    setPlayer(event.target); // player 인스턴스를 설정
+  };
+
+  const playYoutube = useCallback(() => {
+    if (player) {
+      if (play) {
+        player.pauseVideo(); // 비디오가 재생 중이면 멈춤
+      } else {
+        player.playVideo(); // 비디오가 멈춰 있으면 재생
+      }
+      setPlay(!play); // 상태 토글
+    }
+  }, [player, play]);
+
+  const problemDe = () => {
+    console.log(problem);
+    if (typeof problem.videoid === "string") {
+      console.log(problem.videoid);
+      return (
+        <>
+          <div className={styles.youtubeBox} onClick={playYoutube}>
+            <FontAwesomeIcon icon={faYoutube} className={styles.iconyoutube} />
+            <Youtube
+              videoId={problem.videoid}
+              opts={{
+                width: "10px",
+                height: "10px",
+                playerVars: { autoplay: 0, rel: 0, modestbranding: 0 },
+              }}
+              onReady={handlePlayerReady}
+              onEnd={(e) => {
+                e.target.stopVideo(0);
+              }}
+              className={`${styles.youtube}`}
+            />
+          </div>
+          <div className={styles.youtubeTitle}>{problem.problem}</div>
+        </>
+      );
+    } else {
+      return problem.problem;
+    }
+  };
+
   // console.log("useEffect 밖 랜덤숫자", exNum);
   return (
     <>
       <div className={styles.examNumber}>{problem.number} 문제</div>
-      {/* 이 부분에 1~10번까지는 재생형식으로 정정 */}
-      <div className={styles.examTitle}>{problem.problem}</div>
+      <div className={`${styles.examTitle} ${styles.flexColumnCenter}`}>{problemDe()}</div>
       <ol className={`${styles.exams} ${styles.flexColumnCenter}`}>
         {load &&
           exNum.map((e, index) => {
