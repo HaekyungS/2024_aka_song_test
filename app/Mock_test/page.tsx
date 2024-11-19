@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { number, problems } from "../../data/data";
 import { getCookies, setCookie } from "cookies-next";
 import { Ex } from "../../component/problem";
-import { ExPlay } from "../../component/playProblem";
+// import { ExPlay } from "../../component/playProblem";
 
 export default function Page() {
   const [name, setName] = useState("");
@@ -51,14 +51,6 @@ export default function Page() {
     }
   };
 
-  const example = (count: number) => {
-    if (count < 9) {
-      return ExPlay(problems[count], answerInsert);
-    } else {
-      return Ex(problems[count], answerInsert);
-    }
-  };
-
   const answerInsert = (answer) => {
     const answerAll = [...respon];
     answerAll[count] = answer;
@@ -98,7 +90,7 @@ export default function Page() {
 
       {/* 문제 */}
       <div className={`${styles.problem} ${styles.flexColumnCenter}`}>
-        {example(count)}
+        {Ex(problems[count], answerInsert)}
         {NextButton(count)}
       </div>
     </div>
