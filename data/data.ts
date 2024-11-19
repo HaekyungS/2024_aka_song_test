@@ -88,11 +88,11 @@ export const problems: Array<problems> = [
   },
 
   {
-    // https://www.youtube.com/watch?v=UnwOL_xVbtM
+    // https://www.youtube.com/watch?v=tkpQfzhI39o
     number: "아홉번째",
     problem: "재생된 곡은 「지코, 페노메코 - 걘 아니야 Part1, 2」 입니다. 다음 중 어떤 버전일까요?",
-    ex: ["아카펠라 버전", "어쿠스틱 버전", "좌우음성 버전", "좌우음성 No MR 버전"],
-    videoid: "UnwOL_xVbtM",
+    ex: ["기싸움 버전", "어쿠스틱 버전", "좌우음성 버전", "과몰입 버전"],
+    videoid: "tkpQfzhI39o",
   },
   {
     number: "열번째",
