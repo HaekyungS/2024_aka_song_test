@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { number, problems } from "../../data/data";
 import { getCookies, setCookie } from "cookies-next";
 import { Ex } from "../../component/problem";
-// import { ExPlay } from "../../component/playProblem";
 
 export default function Page() {
   const [name, setName] = useState("");
