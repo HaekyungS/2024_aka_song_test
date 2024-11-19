@@ -24,7 +24,7 @@ export default function Page() {
       window.alert("잘못된 접근입니다.");
       window.location.href = "/";
     } else {
-      if (user === "아카이로 류" || user === "아카이로류" || user === "류") {
+      if (grade(score) === 100) {
         setModal(true);
       }
       setName(user);
@@ -60,7 +60,7 @@ export default function Page() {
       {/* 상단 고정부분 */}
       <div className={`${styles.topBox} ${styles.flexColumnCenter}`}>
         <div className={`${styles.topTitle} ${styles.flexRowCenter}`}>
-          <div className={styles.title}>2023년도 아카이로 류 모의고사</div>
+          <div className={styles.title}>2024년도 아카이로 류 모의고사</div>
           <div className={styles.type}>아카용</div>
         </div>
         <div className={`${styles.topName} ${styles.flexRowCenter}`}>
