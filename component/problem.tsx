@@ -56,10 +56,12 @@ export const Ex = (problem: problems, answer) => {
     }
   }, [player, play]);
 
+  // 객체 속 cideoid 가 있는 경우와 없는 경우, 문제출력 다르게.
   const problemDe = () => {
-    console.log(problem);
+    // console.log(problem);
+    // 값이 string으로 있는 경우
     if (typeof problem.videoid === "string") {
-      console.log(problem.videoid);
+      // console.log(problem.videoid);
       return (
         <>
           <div className={styles.youtubeBox} onClick={playYoutube}>
@@ -86,7 +88,6 @@ export const Ex = (problem: problems, answer) => {
     }
   };
 
-  // console.log("useEffect 밖 랜덤숫자", exNum);
   return (
     <>
       <div className={styles.examNumber}>{problem.number} 문제</div>
