@@ -68,7 +68,7 @@ export default function Page() {
       {/* 상단 고정부분 */}
       <div className={`${styles.topBox} ${styles.flexColumnCenter}`}>
         <div className={`${styles.topTitle} ${styles.flexRowCenter}`}>
-          <div className={styles.title}>2024년도 아카이로 류 모의고사</div>
+          <div className={styles.title}>2024년도 아카이로 류 노래 모의고사</div>
           <div className={styles.type}>아카용</div>
         </div>
         <div className={`${styles.topName} ${styles.flexRowCenter}`}>
