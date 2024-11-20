@@ -13,7 +13,11 @@ export const RyuLink = () => {
         {" "}
         나무위키,
       </Link>
-      <Link className={styles.link} href="https://www.twitch.tv/rh_ryu" target="_blank">
+      <Link
+        className={styles.link}
+        href="https://chzzk.naver.com/f67b66f4051fd2744ba9366571565771"
+        target="_blank"
+      >
         {" "}
         생방송,{" "}
       </Link>
