@@ -38,6 +38,7 @@ export const Ex = (problem: problems, answer) => {
     setExNum(exNumA);
     setLoad(true);
     setCheck([{ color: "black" }, { color: "black" }, { color: "black" }, { color: "black" }]);
+    setPlay(false);
     // console.log("useEffect 안 랜덤숫자", exNum);
   }, [problem]);
 
