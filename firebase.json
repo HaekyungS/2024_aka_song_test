@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "site": "ryu-song-test",
+    "source": ".",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "frameworksBackend": {
+      "region": "asia-east1"
+    }
+  }
+}
