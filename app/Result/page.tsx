@@ -6,6 +6,7 @@ import { number, problems } from "../../data/data";
 import { getCookies } from "cookies-next";
 import { scoreMent } from "../../data/scoreMent";
 import { grade } from "../../data/grade";
+import { screenDownload } from "../../component/screenDownload";
 
 export default function Page() {
   const [name, setName] = useState("");
@@ -68,7 +69,7 @@ export default function Page() {
       </div>
 
       {/* 결과 */}
-      <div className={`${styles.result} ${styles.flexColumnCenter}`}>
+      <div id="download" className={`${styles.result} ${styles.flexColumnCenter}`}>
         <div className={`${styles.scoreMent}`}>{scoreMent(score)}</div>
         <div className={`${styles.ment}`}>{name}님의 모의고사 성적은</div>
         <div className={`${styles.ment}`}>{grade(score)}점 입니다.</div>
@@ -83,6 +84,9 @@ export default function Page() {
           >
             공부 하러가기
           </Link>
+          <div onClick={screenDownload} className={`${styles.link} ${styles.resultLink}`}>
+            저장하기
+          </div>
         </div>
       </div>
     </div>
