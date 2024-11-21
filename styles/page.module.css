@@ -240,6 +240,7 @@
   top: 0;
   opacity: 0;
   pointer-events: none;
+  touch-action: none;
   /* visibility: hidden; */
 }
 

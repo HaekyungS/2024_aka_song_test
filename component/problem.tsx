@@ -65,7 +65,7 @@ export const Ex = (problem: problems, answer) => {
       // console.log(problem.videoid);
       return (
         <>
-          <div className={styles.youtubeBox} onClick={playYoutube}>
+          <div className={styles.youtubeBox} onClick={playYoutube} onTouchStart={playYoutube}>
             <FontAwesomeIcon icon={faYoutube} className={styles.iconyoutube} />
             <Youtube
               videoId={problem.videoid}
