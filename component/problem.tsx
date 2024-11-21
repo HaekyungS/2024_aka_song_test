@@ -57,7 +57,7 @@ export const Ex = (problem: problems, answer) => {
     }
   }, [player, play]);
 
-  // 객체 속 cideoid 가 있는 경우와 없는 경우, 문제출력 다르게.
+  // 객체 속 videoid 가 있는 경우와 없는 경우, 문제출력 다르게.
   const problemDe = () => {
     // console.log(problem);
     // 값이 string으로 있는 경우
