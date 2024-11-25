@@ -12,7 +12,6 @@ export default function Page() {
   const [name, setName] = useState("");
   const [respon, setRespon] = useState([]);
   const [score, setScore] = useState(0);
-  const [modal, setModal] = useState(false);
 
   useEffect(() => {
     const user = decodeURIComponent(getCookies()["user"]);
